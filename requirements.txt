@@ -1,4 +1,3 @@
-numpy
+jupyter-book
 matplotlib
-pandas
-jupyter
+numpy

@@ -302,3 +302,4 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/linux,macos,python,windows,pycharm,visualstudiocode,jupyternotebooks
 
 .vscode/
+_build/

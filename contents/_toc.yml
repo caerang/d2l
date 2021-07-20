@@ -1,0 +1,11 @@
+format: jb-book
+root: docs/intro
+chapters:
+- file: docs/ch01/overview
+- file: docs/ch02/overview
+- file: docs/ch03/overview
+  sections:
+  - file: docs/ch03/3.1.Linear_Regression.ipynb
+  - file: docs/ch03/3.2.Linear_Regression_Implementation_from_Scratch.ipynb
+  - file: docs/ch03/3.3.Concise_Implementation_of_Linear_Regression.ipynb
+  - file: docs/ch03/3.4.Softmax_Regression.ipynb

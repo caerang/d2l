@@ -18,32 +18,20 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 %matplotlib inline
-from matplotlib import pyplot as plt
 from IPython import display
+from matplotlib import pyplot as plt
 import torch
-import math
-
-x = torch.arange(-7, 7, 0.01)
-parameters = [(0, 1), (0, 2), (3, 1)]
-
-display.set_matplotlib_formats('svg')
-plt.figure(figsize=(10,6))
-for (mu, sigma) in parameters:
-    p = (1/math.sqrt(2 * math.pi * sigma**2)) * torch.exp(-(0.5/sigma**2) * (x-mu)**2)
-    plt.plot(x.numpy(), p.numpy(), label='mean {}, variance {}'.format(mu, sigma))
-plt.legend()
-plt.grid()
-plt.show()
+import random
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m<ipython-input-1-51ca807326db>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-1-2c00480be7e8>[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mget_ipython[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mrun_line_magic[0m[0;34m([0m[0;34m'matplotlib'[0m[0;34m,[0m [0;34m'inline'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      2[0m [0;32mfrom[0m [0mmatplotlib[0m [0;32mimport[0m [0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      3[0m [0;32mfrom[0m [0mIPython[0m [0;32mimport[0m [0mdisplay[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mfrom[0m [0mIPython[0m [0;32mimport[0m [0mdisplay[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mfrom[0m [0mmatplotlib[0m [0;32mimport[0m [0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      4[0m [0;32mimport[0m [0mtorch[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      5[0m [0;32mimport[0m [0mmath[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mimport[0m [0mrandom[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m~/miniconda3/envs/jupyter-book/lib/python3.9/site-packages/IPython/core/interactiveshell.py[0m in [0;36mrun_line_magic[0;34m(self, magic_name, line, _stack_depth)[0m
 [1;32m   2342[0m                 [0mkwargs[0m[0;34m[[0m[0;34m'local_ns'[0m[0;34m][0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mget_local_scope[0m[0;34m([0m[0mstack_depth[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
